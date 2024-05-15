@@ -1,0 +1,48 @@
+:root {
+  --main-color: #ff6060;
+  --greyLight: #f6f6f6;
+  --container-width: 1200px;
+  --x-padding: 20px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "MontSerrat", sans-serif;
+  font-weight: 500;
+
+  > #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    column-gap: 2.5rem;
+  }
+}
+
+main {
+  width: 100%;
+  max-width: var(--container-width);
+  padding: 0 var(--x-padding);
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: grid;
+  row-gap: 2.25rem;
+  margin-bottom: 3.125rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.white {
+  color: #ffffff;
+}
+
+summary {
+  cursor: pointer;
+
+  &::marker {
+    content: "";
+  }
+}

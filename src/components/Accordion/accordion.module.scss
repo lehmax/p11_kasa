@@ -1,0 +1,51 @@
+.accordion {
+  box-sizing: border-box;
+  background-color: var(--main-color);
+  border-radius: 5px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+
+  &[open] .title::before {
+    transform: rotate(180deg);
+  }
+}
+
+.accordionContainer {
+  width: 100%;
+}
+
+.title {
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0.625rem 1.25rem 0.625rem 0.9375rem;
+  border-radius: 5px;
+  color: white;
+  margin: 0;
+}
+
+.title:before {
+  background: url("../../assets/chevron.svg") no-repeat;
+  width: 1.5rem;
+  height: 1.5rem;
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 1.25rem;
+  transform-origin: center 25%;
+  transform: rotate(0) translateY(-50%);
+  transition: 0.2s transform ease;
+}
+
+.content {
+  background-color: var(--greyLight);
+  padding: 20px;
+  border-radius: 0 0 5px 5px;
+
+  p {
+    padding: 0;
+    margin: 0;
+  }
+}

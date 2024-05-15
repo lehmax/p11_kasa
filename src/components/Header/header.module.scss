@@ -1,0 +1,25 @@
+.header {
+  width: 100%;
+  max-width: var(--container-width);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 2.8125rem auto 3.125rem auto;
+  padding: 0 var(--x-padding);
+
+  nav {
+    display: flex;
+    align-items: center;
+    column-gap: 3.5rem;
+
+    a {
+      text-decoration: none;
+      color: #000;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

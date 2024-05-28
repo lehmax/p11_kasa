@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export const useFetch = (url) => {
   const [data, setData] = useState({});
   const [isLoading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
+  const [isError, setError] = useState(false);
 
   useEffect(() => {
     if (!url) return;
@@ -28,5 +28,5 @@ export const useFetch = (url) => {
     fetchData();
   }, [url]);
 
-  return { isLoading, data, error };
+  return { isLoading, data, isError };
 };

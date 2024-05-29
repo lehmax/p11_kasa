@@ -6,9 +6,9 @@ import Accordion from "../../components/Accordion";
 import Carrousel from "../../components/Carrousel";
 import Error from "../../components/Error";
 import Host from "../../components/Host";
-import Loading from "../../components/Loading";
 import Rating from "../../components/Rating";
 import Tags from "../../components/Tags";
+import LodgementLoading from "./LodgmentLoading";
 
 import classes from "./lodgement.module.scss";
 
@@ -17,7 +17,7 @@ const Lodgement = () => {
   const id = pathname.split("/").pop();
   const { data, error, isLoading } = useFetch("/logements.json");
 
-  if (isLoading) return <Loading />;
+  if (isLoading) return <LodgementLoading />;
 
   if (error) return <Error />;
 

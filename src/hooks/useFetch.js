@@ -21,7 +21,9 @@ export const useFetch = (url) => {
 
         setError(true);
       } finally {
-        setLoading(false);
+        setTimeout(() => {
+          setLoading(false);
+        }, 2000);
       }
     };
 

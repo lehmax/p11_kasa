@@ -3,10 +3,10 @@ import { useFetch } from "../../hooks/useFetch";
 import Card from "../../components/Card";
 import Error from "../../components/Error";
 import Grid from "../../components/Grid";
-import GridLoading from "../../components/Grid/GridLoading";
 import HeroBanner from "../../components/HeroBanner";
 
 import heroImage from "../../assets/hero_home.jpg";
+import SkeletonCard from "../../components/Card/SkeletonCard";
 
 const Home = () => {
   const { isLoading, data, isError } = useFetch("/logements.json");
@@ -15,7 +15,13 @@ const Home = () => {
   let lodgementGrid;
 
   if (isLoading) {
-    lodgementGrid = <GridLoading />;
+    lodgementGrid = (
+      <Grid>
+        {[0, 1, 2].map((index) => (
+          <SkeletonCard key={index} />
+        ))}
+      </Grid>
+    );
   }
 
   if (isError) {

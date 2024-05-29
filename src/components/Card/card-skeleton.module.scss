@@ -1,0 +1,23 @@
+.card {
+  box-sizing: border-box;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem 1.25rem;
+  position: relative;
+}
+
+.skeleton_title {
+  border-radius: 10px;
+}
+
+.skeleton_icon {
+  font-size: 56px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

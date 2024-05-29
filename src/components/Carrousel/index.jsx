@@ -9,6 +9,7 @@ const NAV_KEY = {
 const Carrousel = ({ pictures }) => {
   const [current, setCurrent] = useState(0);
   const lastPictureIndex = pictures.length - 1;
+  const isCarrousel = pictures.length > 1;
 
   const onNav = (type) => {
     const { next, prev } = NAV_KEY;
@@ -27,9 +28,15 @@ const Carrousel = ({ pictures }) => {
     setCurrent(index);
   };
 
+  const pagination = () => (
+    <span className={classes.pagination}>{`${current + 1}/${
+      pictures.length
+    }`}</span>
+  );
+
   return (
     <div className={classes.carrousel}>
-      {lastPictureIndex > 0 && (
+      {isCarrousel && (
         <nav>
           <button
             onClick={() => onNav(NAV_KEY.prev)}
@@ -43,6 +50,7 @@ const Carrousel = ({ pictures }) => {
           >
             <i className="fa-solid fa-chevron-right white"></i>
           </button>
+          {pagination()}
         </nav>
       )}
       <div className={classes.items}>

@@ -20,6 +20,17 @@
     }
   }
 
+  .pagination {
+    position: absolute;
+    z-index: 2;
+    bottom: 30px;
+    font-weight: 1.125rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-shadow: 0px 0px 5px #333;
+  }
+
   .item {
     display: none;
 

@@ -1,0 +1,8 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 3.75rem;
+  padding: 3.5rem 3rem;
+  background-color: var(--greyLight);
+  border-radius: 25px;
+}

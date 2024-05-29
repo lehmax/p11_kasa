@@ -33,10 +33,10 @@ const Home = () => {
   }
 
   return (
-    <>
+    <main>
       <HeroBanner image={heroImage} title="Chez vous, partout et ailleurs" />
       {lodgementGrid}
-    </>
+    </main>
   );
 };
 

@@ -37,7 +37,7 @@ const Lodgement = () => {
   } = lodgement;
 
   return (
-    <>
+    <main>
       <Carrousel pictures={pictures} />
       <div className={classes.data}>
         <div className={classes.column}>
@@ -70,7 +70,7 @@ const Lodgement = () => {
           </Accordion>
         ) : null}
       </div>
-    </>
+    </main>
   );
 };
 

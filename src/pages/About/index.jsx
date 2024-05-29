@@ -34,7 +34,7 @@ const content = [
 
 const About = () => {
   return (
-    <>
+    <main>
       <HeroBanner image={heroImage} opacity="30" />
       <div className={classes.content}>
         {content.map((item) => (
@@ -43,7 +43,7 @@ const About = () => {
           </Accordion>
         ))}
       </div>
-    </>
+    </main>
   );
 };
 

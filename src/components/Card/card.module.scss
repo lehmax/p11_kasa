@@ -10,7 +10,13 @@
 }
 
 .content {
-  background: rgba(0, 0, 0, 0.2);
+  background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 100%, 0) 0%,
+    hsla(0, 0%, 4%, 0) 42%,
+    hsla(0, 0%, 2%, 0.2) 100%,
+    hsla(0, 0%, 0%, 0.5) 100%
+  );
   backdrop-filter: blur(2px);
   display: flex;
   align-items: end;

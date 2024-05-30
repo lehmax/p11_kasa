@@ -6,15 +6,18 @@
   animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   background-color: var(--load-color);
   border-radius: 10px;
+}
 
-  &_icon {
-    color: var(--load-color);
-    background-color: transparent;
-  }
+.skeleton_icon {
+  animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  color: var(--load-color);
+  border-radius: 10px;
+}
 
-  &_circle {
-    border-radius: 50%;
-  }
+.skeleton_circle {
+  animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  background-color: var(--load-color);
+  border-radius: 50%;
 }
 
 @keyframes pulse {

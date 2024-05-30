@@ -2,11 +2,30 @@
   margin-top: auto;
   background-color: #000000;
   padding: 3.75rem 0 1.875rem 0;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+
+  img {
+    width: 123px;
+  }
+
+  @media screen and (min-width: 768px) {
+    gap: 2rem;
+  }
 
   p {
     color: #ffffff;
-    font-size: 1.5rem;
     font-weight: 500;
+    max-width: 123px;
+    text-align: center;
+    margin: 0;
+    font-size: clamp(0.75rem, 2vw, 1.5rem);
+
+    @media screen and (min-width: 768px) {
+      max-width: 100%;
+    }
   }
 }

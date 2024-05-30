@@ -26,12 +26,15 @@ main {
   margin: 0 auto;
   box-sizing: border-box;
   display: grid;
-  row-gap: 2.25rem;
+  row-gap: 1.1875rem;
   margin-bottom: 3.125rem;
+
+  @media screen and (min-width: 768px) {
+    row-gap: 2.25rem;
+  }
 }
 
 .title {
-  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -45,20 +48,4 @@ summary {
   &::marker {
     content: "";
   }
-}
-
-.row {
-  display: flex;
-  column-gap: 0.625rem;
-}
-
-.col-2 {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  column-gap: 0.625rem;
-}
-
-.mb-1 {
-  margin-bottom: 10px;
 }

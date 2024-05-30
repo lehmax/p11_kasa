@@ -3,22 +3,39 @@
   max-width: var(--container-width);
   display: flex;
   justify-content: space-between;
+  gap: 1.25rem;
   align-items: center;
   box-sizing: border-box;
   margin: 2.8125rem auto 3.125rem auto;
   padding: 0 var(--x-padding);
+  box-sizing: border-box;
+
+  img {
+    width: clamp(100px, 33%, 210px);
+  }
 
   nav {
     display: flex;
     align-items: center;
-    column-gap: 3.5rem;
+    column-gap: 1.5rem;
+
+    @media screen and (min-width: 768px) {
+      column-gap: 3.5rem;
+    }
 
     a {
       text-decoration: none;
       color: #000;
-      font-size: 1.5rem;
+      font-size: clamp(0.75rem, 3vw, 1.5rem);
 
-      &:hover {
+      &:global {
+        &.active {
+          text-decoration: underline;
+        }
+      }
+
+      &:hover,
+      &:focus {
         text-decoration: underline;
       }
     }

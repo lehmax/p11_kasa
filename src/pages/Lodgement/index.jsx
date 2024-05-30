@@ -4,11 +4,12 @@ import { useFetch } from "../../hooks/useFetch";
 
 import Accordion from "../../components/Accordion";
 import Carrousel from "../../components/Carrousel";
-import Error from "../../components/Error";
 import Host from "../../components/Host";
 import Rating from "../../components/Rating";
 import Tags from "../../components/Tags";
 import LodgementLoading from "./LodgmentLoading";
+
+import Error from "../Error";
 
 import classes from "./lodgement.module.scss";
 
@@ -40,14 +41,14 @@ const Lodgement = () => {
     <main>
       <Carrousel pictures={pictures} />
       <div className={classes.data}>
-        <div className={classes.column}>
+        <div className={classes.section_title}>
           <div className={classes.title}>
             <h1>{title}</h1>
             <span className={classes.location}>{location}</span>
           </div>
           <Tags tags={tags} />
         </div>
-        <div className={classes.column}>
+        <div className={classes.section_host}>
           <Host host={host} />
           <Rating rating={rating} />
         </div>

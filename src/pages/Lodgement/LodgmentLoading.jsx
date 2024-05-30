@@ -7,22 +7,26 @@ const LodgmentLoading = () => {
     <main>
       <Skeleton height="415px" />
       <div className={classes.data}>
-        <div className={classes.column}>
+        <div className={classes.section_title}>
           <div className={classes.title}>
-            <Skeleton className="mb-1" width="500px" height="50px" />
+            <Skeleton
+              className={classes.mb_1}
+              width="clamp(200px,60vw,500px)"
+              height="50px"
+            />
             <Skeleton width="50%" />
           </div>
-          <div className="row">
+          <div className={classes.row}>
             <Skeleton width="100px" />
             <Skeleton width="100px" />
           </div>
         </div>
-        <div className={classes.column}>
-          <div className="col-2">
-            <Skeleton width="100px" />
+        <div className={classes.section_host}>
+          <div className={classes.col_2}>
+            <Skeleton width="clamp(40px,10vw,100px)" />
             <Skeleton isCircle={true} width="64px" height="64px" />
           </div>
-          <Skeleton width="200px" height="40px" />
+          <Skeleton width="clamp(140px,5vw,200px)" height="40px" />
         </div>
       </div>
 

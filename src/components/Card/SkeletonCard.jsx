@@ -11,7 +11,7 @@ const SkeletonCard = () => {
         isIcon={true}
         className={`${classes.skeleton_icon} fa-solid fa-camera`}
       />
-      <Skeleton width="80%" height="24px" className={classes.skeleton_title} />
+      <Skeleton width="100%" height="24px" className={classes.skeleton_title} />
     </div>
   );
 };

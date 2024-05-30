@@ -5,19 +5,23 @@
   column-gap: 0.625rem;
 
   .name {
-    font-size: 1.25rem;
+    font-size: clamp(0.75rem, 2vw, 1.125rem);
     font-weight: 500;
     color: var(--main-color);
-    font-size: 1.125rem;
     max-width: 100px;
     text-align: right;
     line-height: 142%;
   }
 
   img {
-    width: 64px;
-    height: 64px;
+    width: 32px;
+    height: 32px;
     object-fit: contain;
     border-radius: 50%;
+
+    @media screen and (min-width: 768px) {
+      width: 64px;
+      height: 64px;
+    }
   }
 }

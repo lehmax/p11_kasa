@@ -23,7 +23,7 @@ export const useFetch = (url) => {
       } finally {
         setTimeout(() => {
           setLoading(false);
-        }, 2000);
+        }, 1000000);
       }
     };
 

@@ -1,14 +1,14 @@
-import classes from "./host.module.scss";
+import styles from './host.module.scss'
 
 const Host = ({ host }) => {
-  const { name, picture } = host;
+  const { name, picture } = host
 
   return (
-    <div className={classes.host}>
-      <strong className={classes.name}>{name}</strong>
-      <img src={picture} alt={`Photo of ${name}`} />
+    <div className={styles.host}>
+      <strong className={styles.name}>{name}</strong>
+      <img alt={`Photo of ${name}`} src={picture} />
     </div>
-  );
-};
+  )
+}
 
-export default Host;
+export default Host

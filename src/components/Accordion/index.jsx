@@ -1,16 +1,16 @@
-import classes from "./accordion.module.scss";
+import styles from './accordion.module.scss'
 
 const Accordion = ({ title, children }) => {
   return (
-    <div className={classes.accordionContainer}>
-      <details className={classes.accordion}>
+    <div className={styles.accordionContainer}>
+      <details className={styles.accordion}>
         <summary>
-          <h2 className={classes.title}>{title}</h2>
+          <h2 className={styles.title}>{title}</h2>
         </summary>
-        <div className={classes.content}>{children}</div>
+        <div className={styles.content}>{children}</div>
       </details>
     </div>
-  );
-};
+  )
+}
 
-export default Accordion;
+export default Accordion

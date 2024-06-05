@@ -1,15 +1,15 @@
-import Star from "./star";
+import Star from './star'
 
-import classes from "./rating.module.scss";
+import styles from './rating.module.scss'
 
 const Rating = ({ rating = 0 }) => {
   return (
-    <div className={classes.rating}>
+    <div className={styles.rating}>
       {[1, 2, 3, 4, 5].map((star) => (
-        <Star key={star} isFilled={star <= rating} />
+        <Star isFilled={star <= rating} key={star} />
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default Rating;
+export default Rating

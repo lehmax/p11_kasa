@@ -1,19 +1,19 @@
-import Skeleton from "../Skeleton";
+import Skeleton from '../Skeleton'
 
-import classes from "./card-skeleton.module.scss";
+import styles from './card-skeleton.module.scss'
 
 const SkeletonCard = () => {
   return (
-    <div className={`${classes.card}`}>
+    <div className={`${styles.card}`}>
       <Skeleton
-        width="64px"
+        className={`${styles.skeleton_icon} fa-solid fa-camera`}
         height="64px"
         isIcon={true}
-        className={`${classes.skeleton_icon} fa-solid fa-camera`}
+        width="64px"
       />
-      <Skeleton width="100%" height="24px" className={classes.skeleton_title} />
+      <Skeleton className={styles.skeleton_title} height="24px" width="100%" />
     </div>
-  );
-};
+  )
+}
 
-export default SkeletonCard;
+export default SkeletonCard

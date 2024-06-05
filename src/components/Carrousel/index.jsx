@@ -1,72 +1,76 @@
-import { useState } from "react";
-import classes from "./carrousel.module.scss";
+import { useState } from 'react'
+import styles from './carrousel.module.scss'
 
 const NAV_KEY = {
   prev: -1,
   next: 1,
-};
+}
 
 const Carrousel = ({ pictures }) => {
-  const [current, setCurrent] = useState(0);
-  const lastPictureIndex = pictures.length - 1;
-  const isCarrousel = pictures.length > 1;
+  const [current, setCurrent] = useState(0)
+  const lastPictureIndex = pictures.length - 1
+  const isCarrousel = pictures.length > 1
 
   const onNav = (type) => {
-    const { next, prev } = NAV_KEY;
-    if (type !== next && type !== prev && lastPictureIndex !== 0) return;
+    const { next, prev } = NAV_KEY
+    if (type !== next && type !== prev && lastPictureIndex !== 0) return
 
-    let index;
+    let index
 
     if (type === prev) {
-      index = current !== 0 ? current + prev : lastPictureIndex;
+      index = current !== 0 ? current + prev : lastPictureIndex
     }
 
     if (type === next) {
-      index = current !== lastPictureIndex ? current + next : 0;
+      index = current !== lastPictureIndex ? current + next : 0
     }
 
-    setCurrent(index);
-  };
+    setCurrent(index)
+  }
 
   const pagination = () => (
-    <span className={classes.pagination}>{`${current + 1}/${
+    <span className={styles.pagination}>{`${current + 1}/${
       pictures.length
     }`}</span>
-  );
+  )
 
   return (
-    <div className={classes.carrousel}>
-      {isCarrousel && (
+    <div className={styles.carrousel}>
+      {isCarrousel ? (
         <nav>
           <button
+            className={`${styles.prev} ${styles.btn}`}
             onClick={() => onNav(NAV_KEY.prev)}
-            className={`${classes.prev} ${classes.btn}`}
+            type="button"
           >
-            <i className="fa-solid fa-chevron-left white"></i>
+            <i className="fa-solid fa-chevron-left white" />
           </button>
           <button
+            className={`${styles.next} ${styles.btn}`}
             onClick={() => onNav(NAV_KEY.next)}
-            className={`${classes.next} ${classes.btn}`}
+            type="button"
           >
-            <i className="fa-solid fa-chevron-right white"></i>
+            <i className="fa-solid fa-chevron-right white" />
           </button>
           {pagination()}
         </nav>
-      )}
-      <div className={classes.items}>
+      ) : null}
+      <div className={styles.items}>
         {pictures.map((picture, index) => (
           <div
-            key={index}
-            className={`${classes.item} ${
-              current === index ? classes.active : ""
+            className={`${styles.item} ${
+              current === index ? styles.active : ''
             }`}
+            key={index}
           >
-            <img src={picture} alt="" />
+            <img alt="" src={picture} />
           </div>
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Carrousel;
+export default Carrousel
+
+// @TODO pagination + alt

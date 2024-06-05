@@ -1,15 +1,15 @@
-import classes from "./tags.module.scss";
+import styles from './tags.module.scss'
 
 const Tags = ({ tags }) => {
   return (
-    <div className={classes.tags}>
+    <div className={styles.tags}>
       {tags.map((tag, index) => (
-        <span key={index} className={classes.tag}>
+        <span className={styles.tag} key={index}>
           {tag}
         </span>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default Tags;
+export default Tags

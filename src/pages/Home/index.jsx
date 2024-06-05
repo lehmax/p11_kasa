@@ -1,49 +1,38 @@
-import { useFetch } from "../../hooks/useFetch";
+import { useFetch } from '../../hooks/useFetch'
 
-import Card from "../../components/Card";
-import Error from "../../components/Error";
-import Grid from "../../components/Grid";
-import HeroBanner from "../../components/HeroBanner";
+import Card from '../../components/Card'
+import Error from '../../components/Error'
+import HeroBanner from '../../components/HeroBanner'
 
-import heroImage from "../../assets/hero_home.jpg";
-import SkeletonCard from "../../components/Card/SkeletonCard";
+import heroImage from '../../assets/hero_home.jpg'
+import SkeletonCard from '../../components/Card/SkeletonCard'
+
+import styles from './home.module.scss'
+
+const Grid = () => {
+  const { isLoading, data, isError } = useFetch('/logements.json')
+  const isData = !isLoading && !isError && data
+
+  return (
+    <div className={styles.grid}>
+      {isLoading
+        ? [0, 1, 2].map((index) => <SkeletonCard key={index} />)
+        : null}
+      {isError ? <Error /> : null}
+      {isData
+        ? data.map((lodgement) => <Card data={lodgement} key={lodgement.id} />)
+        : null}
+    </div>
+  )
+}
 
 const Home = () => {
-  const { isLoading, data, isError } = useFetch("/logements.json");
-  const isData = !isLoading && !isError && data;
-
-  let lodgementGrid;
-
-  if (isLoading) {
-    lodgementGrid = (
-      <Grid>
-        {[0, 1, 2].map((index) => (
-          <SkeletonCard key={index} />
-        ))}
-      </Grid>
-    );
-  }
-
-  if (isError) {
-    lodgementGrid = <Error />;
-  }
-
-  if (isData) {
-    lodgementGrid = (
-      <Grid>
-        {data.map((lodgement) => (
-          <Card key={lodgement.id} data={lodgement} />
-        ))}
-      </Grid>
-    );
-  }
-
   return (
     <main>
       <HeroBanner image={heroImage} title="Chez vous, partout et ailleurs" />
-      {lodgementGrid}
+      <Grid />
     </main>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

@@ -6,10 +6,16 @@ const NAV_KEY = {
   next: 1,
 }
 
+const Pagination = ({ position }) => {
+  return <span className={styles.pagination}>{position}</span>
+}
+
 const Carrousel = ({ pictures }) => {
   const [current, setCurrent] = useState(0)
-  const lastPictureIndex = pictures.length - 1
-  const isCarrousel = pictures.length > 1
+  const countPictures = pictures.length
+  const lastPictureIndex = countPictures - 1
+  const isCarrousel = countPictures > 1
+  const currentPosition = current + 1
 
   const onNav = (type) => {
     const { next, prev } = NAV_KEY
@@ -27,12 +33,6 @@ const Carrousel = ({ pictures }) => {
 
     setCurrent(index)
   }
-
-  const pagination = () => (
-    <span className={styles.pagination}>{`${current + 1}/${
-      pictures.length
-    }`}</span>
-  )
 
   return (
     <div className={styles.carrousel}>
@@ -52,7 +52,7 @@ const Carrousel = ({ pictures }) => {
           >
             <i className="fa-solid fa-chevron-right white" />
           </button>
-          {pagination()}
+          <Pagination position={`${currentPosition}/${countPictures}`} />
         </nav>
       ) : null}
       <div className={styles.items}>
@@ -63,7 +63,10 @@ const Carrousel = ({ pictures }) => {
             }`}
             key={index}
           >
-            <img alt="" src={picture} />
+            <img
+              alt={`Image ${currentPosition} of ${countPictures}`}
+              src={picture}
+            />
           </div>
         ))}
       </div>
@@ -72,5 +75,3 @@ const Carrousel = ({ pictures }) => {
 }
 
 export default Carrousel
-
-// @TODO pagination + alt

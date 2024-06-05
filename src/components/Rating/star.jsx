@@ -1,15 +1,14 @@
-import styles from './rating.module.scss'
+import styles from "./rating.module.scss";
 
-const Star = ({ isFilled }) => {
+const Star = ({ isFilled, isHalf }) => {
   return (
     <i
       className={`fa-solid fa-star ${styles.star} ${
-        isFilled ? styles.isFilled : ''
-      }`}
+        isFilled ? styles.isFilled : ""
+      } ${isHalf ? styles.isHalf : ""}
+      `}
     />
-  )
-}
+  );
+};
 
-export default Star
-
-// Ajout Décimal
+export default Star;

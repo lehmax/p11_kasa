@@ -34,7 +34,10 @@
       "always",
       { "destructureInSignature": "always" }
     ],
-    "react/jsx-no-leaked-render": ["error", { "validStrategies": ["ternary"] }],
+    "react/jsx-no-leaked-render": [
+      "error",
+      { "validStrategies": ["ternary", "coerce"] }
+    ],
     "react/jsx-max-depth": ["error", { "max": 5 }],
     "react/function-component-definition": [
       "warn",

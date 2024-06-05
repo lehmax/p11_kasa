@@ -15,7 +15,7 @@
       "name": "Nathalie Jean",
       "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg"
     },
-    "rating": "5",
+    "rating": "2.5",
     "location": "Ile de France - Paris 17e",
     "equipments": [
       "Équipements de base",
@@ -42,7 +42,7 @@
       "name": "Della Case",
       "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-1.jpg"
     },
-    "rating": "4",
+    "rating": "4.1",
     "location": "Ile de France - Paris 10e",
     "equipments": [
       "Parking",
@@ -69,7 +69,7 @@
       "name": "Franck Maher",
       "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-2.jpg"
     },
-    "rating": "3",
+    "rating": "3.2459",
     "location": "Ile de France - Paris 20e",
     "equipments": ["Wi-fi", "Cuisine équipée", "Télévision", "Sèche Cheveux"],
     "tags": ["Buttes Chaumont", "Laumière", "Studio"]

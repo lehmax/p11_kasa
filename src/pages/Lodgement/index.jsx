@@ -9,7 +9,7 @@ import Rating from '../../components/Rating'
 import Tags from '../../components/Tags'
 import LodgementLoading from './LodgmentLoading'
 
-import Error from '../Error'
+import Error from '../Error404'
 
 import styles from './lodgement.module.scss'
 

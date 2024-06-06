@@ -1,14 +1,12 @@
 import { useEffect, useState } from 'react'
 
 export const useFetch = (url) => {
-  const [data, setData] = useState([])
+  const [data, setData] = useState(null)
   const [isLoading, setLoading] = useState(true)
   const [isError, setError] = useState(false)
 
   useEffect(() => {
     if (!url) return
-
-    setLoading(true)
 
     const fetchData = async () => {
       try {

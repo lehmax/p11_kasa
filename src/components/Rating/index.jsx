@@ -1,9 +1,10 @@
-import Star from "./star";
+import Star from './star'
 
-import styles from "./rating.module.scss";
+import { useMemo } from 'react'
+import styles from './rating.module.scss'
 
 const Rating = ({ rating = 0 }) => {
-  const roundedRating = Math.round(rating * 2) / 2;
+  const roundedRating = useMemo(() => Math.round(rating * 2) / 2, [rating])
 
   return (
     <div className={styles.rating}>
@@ -15,7 +16,7 @@ const Rating = ({ rating = 0 }) => {
         />
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default Rating;
+export default Rating

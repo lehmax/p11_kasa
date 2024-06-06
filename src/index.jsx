@@ -1,11 +1,14 @@
 import React, { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+
 import Root from './Root.jsx'
+
 import About from './pages/About/index.jsx'
-import { default as Error404 } from './pages/Error404/index.jsx'
+import Error404 from './pages/Error404/index.jsx'
 import Home from './pages/Home/index.jsx'
 import Lodgement from './pages/Lodgement/index.jsx'
+
 import './styles/global.scss'
 
 const router = createBrowserRouter([

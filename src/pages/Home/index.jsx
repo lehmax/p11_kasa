@@ -15,13 +15,10 @@ const Grid = () => {
 
   return (
     <div className={styles.grid}>
-      {isLoading
-        ? [0, 1, 2].map((index) => <SkeletonCard key={index} />)
-        : null}
-      {isError ? <Error /> : null}
-      {isData
-        ? data.map((lodgement) => <Card data={lodgement} key={lodgement.id} />)
-        : null}
+      {isLoading && [0, 1, 2].map((index) => <SkeletonCard key={index} />)}
+      {isError && <Error />}
+      {isData &&
+        data.map((lodgement) => <Card data={lodgement} key={lodgement.id} />)}
     </div>
   )
 }
